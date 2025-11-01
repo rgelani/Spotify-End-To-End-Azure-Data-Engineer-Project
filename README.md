@@ -89,6 +89,12 @@ The logic is controlled by a **cdc.json** file, which stores the latest CDC time
 5. **Script Activity** – Extracts maximum CDC for next load.  
 6. **Copy Data Activity** – Updates new CDC value in `container/bronze/cdc/cdc.json`.
 
+   <img width="2530" height="1056" alt="image" src="https://github.com/user-attachments/assets/1f34fc70-f7b6-404c-919f-b109764a2587" />
+   
+   <img width="1952" height="498" alt="image" src="https://github.com/user-attachments/assets/c7044403-6680-4d22-884d-d5567dd183cb" />
+
+   <img width="1630" height="424" alt="image" src="https://github.com/user-attachments/assets/dfb1076b-882a-45be-9378-d80f3a89040b" />
+
 ---
 
 ## 🧩 Technical Architecture Diagram
