@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SpotifySqlLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
