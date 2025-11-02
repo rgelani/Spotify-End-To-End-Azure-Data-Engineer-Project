@@ -97,6 +97,19 @@ The logic is controlled by a **cdc.json** file, which stores the latest CDC time
 
 ---
 
+## 🔔 Failure Notifications with Azure Logic Apps (via ADF Web Activity)
+
+Add a lightweight alerting path so that **if any pipeline/activity fails**, ADF calls a **Logic App HTTP endpoint** which then **emails your team**.
+
+---
+
+### 1) Create the Logic App (HTTP → Email)
+
+- **Trigger:** *When an HTTP request is received*  
+- Add a **Request Body JSON Schema** (minimal and flexible):
+
+<img width="2060" height="644" alt="image" src="https://github.com/user-attachments/assets/88d57224-f56b-47c0-93ed-4dcba250f94c" />
+
 ## 🧩 Technical Architecture Diagram
 
 ```text
