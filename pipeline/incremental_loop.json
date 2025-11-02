@@ -326,10 +326,8 @@
 					{
 						"activity": "Incremental Dynamic For all table",
 						"dependencyConditions": [
-							"Skipped",
 							"Failed",
-							"Succeeded",
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
