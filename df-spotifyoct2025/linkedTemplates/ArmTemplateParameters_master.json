@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-spotifyoct2025"
+		},
+		"SpotifyAdlsLS_accountKey": {
+			"value": ""
+		},
+		"SpotifySqlLS_password": {
+			"value": ""
+		},
+		"SpotifyAdlsLS_properties_typeProperties_url": {
+			"value": "https://spotifyeteoct2025adls.dfs.core.windows.net/"
+		},
+		"SpotifySqlLS_properties_typeProperties_server": {
+			"value": "spotifyeteoct2025.database.windows.net"
+		},
+		"SpotifySqlLS_properties_typeProperties_database": {
+			"value": "spotifyocteteproject"
+		},
+		"SpotifySqlLS_properties_typeProperties_userName": {
+			"value": "dataengineer2026"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

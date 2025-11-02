@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "df-spotifyoct2025"
+		},
+		"SpotifyAdlsLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'SpotifyAdlsLS'"
+		},
+		"SpotifySqlLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SpotifySqlLS'"
+		},
+		"SpotifyAdlsLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://spotifyeteoct2025adls.dfs.core.windows.net/"
+		},
+		"SpotifySqlLS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "spotifyeteoct2025.database.windows.net"
+		},
+		"SpotifySqlLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "spotifyocteteproject"
+		},
+		"SpotifySqlLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "dataengineer2026"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "df-spotifyoct2025_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SpotifyAdlsLS_accountKey": {
+						"value": "[parameters('SpotifyAdlsLS_accountKey')]"
+					},
+					"SpotifySqlLS_password": {
+						"value": "[parameters('SpotifySqlLS_password')]"
+					},
+					"SpotifyAdlsLS_properties_typeProperties_url": {
+						"value": "[parameters('SpotifyAdlsLS_properties_typeProperties_url')]"
+					},
+					"SpotifySqlLS_properties_typeProperties_server": {
+						"value": "[parameters('SpotifySqlLS_properties_typeProperties_server')]"
+					},
+					"SpotifySqlLS_properties_typeProperties_database": {
+						"value": "[parameters('SpotifySqlLS_properties_typeProperties_database')]"
+					},
+					"SpotifySqlLS_properties_typeProperties_userName": {
+						"value": "[parameters('SpotifySqlLS_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
